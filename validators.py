@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 import requests
 
 def get_validators_by_operator(operator_id):
@@ -11,7 +12,11 @@ def get_validators_by_operator(operator_id):
         return []
 
 def get_validator_performance(validator_pub_key, api_key):
-    url = f"https://api.rated.network/v0/eth/validators/{validator_pub_key}/effectiveness"
+    end_time = datetime.now()
+    start_time = end_time - timedelta(days=1)
+    start_timestamp = int(start_time.timestamp())
+    end_timestamp = int(end_time.timestamp())
+    url = f"https://api.rated.network/v0/eth/validators/{validator_pub_key}/effectiveness?from={start_timestamp}&to={end_timestamp}"
     headers = {'Authorization': f'Bearer {api_key}'}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
