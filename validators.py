@@ -17,7 +17,6 @@ def get_validator_performance(validator_pub_key, api_key):
     if response.status_code == 200:
         return response.json()
     else:
-        print(f"Failed to fetch performance for validator {validator_pub_key}")
         return None
 
 def main():
@@ -32,10 +31,10 @@ def main():
                 if performance and 'data' in performance and len(performance['data']) > 0:
                     # Accessing the first item in the 'data' array
                     effectiveness = performance['data'][0].get('validatorEffectiveness')
-                    if effectiveness is not None:
-                        print(f"Validator {pub_key}: Effectiveness = {effectiveness}")
-                    else:
-                        print(f"Validator {pub_key}: Effectiveness data not available")
+                    avgCorrectness = performance['data'][0].get('avgCorrectness')
+                    print(f"Validator {pub_key}: ")
+                    print(f"Effectiveness = {effectiveness}")
+                    print(f"Average Correctness = {avgCorrectness}")
                 else:
                     print(f"Validator {pub_key}: Performance data not available")
 
