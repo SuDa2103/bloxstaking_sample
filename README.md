@@ -3,6 +3,28 @@
 A simple python script to find the performance of all validators belonging to one operator. 
 
 
+## Pre-Requisites
+
+1. python3
+
+```
+python3 --version
+```
+
+2. pip3
+
+pip3 --version
+To make sure we have all the correct libraries you can use pip with the requirements.txt to install them all
+
+pip3 install -r requirements.txt
+To make sure you have all the tools required and have setup your environment correctly, it is best to try out the most basic vega-time script.
+
+python3 get-vega-time.py
+Import the appropriate vega-config into your local environment for the network you want to test against (default vega-config is Fairground testnet).
+
+source vega-config
+
+
 ## Getting Started
 Clone this repo onto your local machine so you have access to all the files and can change them as you need.
 
