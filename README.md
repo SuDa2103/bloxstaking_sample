@@ -30,7 +30,7 @@ pip3 install requests
 Clone this repo onto your local machine so you have access to all the files and can change them as you need.
 
 ```
-git clone [https://github.com/vegaprotocol/sample-api-scripts.git](https://github.com/SuDa2103/bloxstaking_sample.git)
+git clone https://github.com/SuDa2103/bloxstaking_sample.git
 ```
 This should create you a folder named blocstaking_sample that you will use for the rest of this README.
 
