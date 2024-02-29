@@ -12,6 +12,7 @@ def get_validators_by_operator(operator_id):
         return []
 
 def get_validator_performance(validator_pub_key, api_key):
+    # Getting the timestamps for the 24h period in question
     end_time = datetime.now()
     start_time = end_time - timedelta(days=1)
     start_timestamp = int(start_time.timestamp())
