@@ -26,7 +26,7 @@ def get_validator_performance(validator_pub_key, api_key):
 
 def main():
     operator_id = 2  # Replace this with the operator ID you want to explore
-    api_key = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzY29wZXMiOltdLCJpZCI6IjI1NGZlODZiYTU4NTRiN2E5N2YyNTI5YTE4Y2FjNDQ5Iiwic3ViIjoiMGUzYjdkMjliZjI4NDUxYTllZTcwNzJiNTkxMWViMjgiLCJleHAiOjE3NDAwODQ4NzV9.hCAfFUaro0Lm8KycMepc_1TREatEMPTbYGY5OYdxAMPWLZaAOqLPT-HvmmwA-mVvi8vxap1pZhF1B5EJGS36BQ'  
+    api_key = 'YOUR_API_KEY'  
     validators = get_validators_by_operator(operator_id)
     if validators:
         for validator in validators:
