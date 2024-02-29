@@ -38,5 +38,5 @@ Make sure you adjust the script to your needs. Input your own API Key and on the
 
 At this point, you should be ready to run the script using the following command. 
 ```
-  python3 login.py
+  python3 validators.py
 ```
