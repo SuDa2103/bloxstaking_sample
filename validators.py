@@ -35,7 +35,7 @@ def main():
             if pub_key:
                 performance = get_validator_performance(pub_key, api_key)
                 if performance and 'data' in performance and len(performance['data']) > 0:
-                    # Accessing the first item in the 'data' array
+                    # Accessing validator performance data from the 'data' array
                     effectiveness = performance['data'][0].get('validatorEffectiveness')
                     avgCorrectness = performance['data'][0].get('avgCorrectness')
                     print(f"Validator {pub_key}: ")
