@@ -58,11 +58,15 @@ def main():
                     # Accessing validator performance data from the 'data' array
                     effectiveness = performance['data'][0].get('validatorEffectiveness')
                     avgCorrectness = performance['data'][0].get('avgCorrectness')
+                    proposerEffectiveness = performance['data'][0].get('proposerEffectiveness')
                     print(f"Validator {pub_key}: ")
                     print(f"Effectiveness = {effectiveness}")
                     print(f"Average Correctness = {avgCorrectness}")
+                    print(f"Proposer Effectiveness = {proposerEffectiveness}")
                 else:
                     print(f"Validator {pub_key}: Performance data not available")
+    else:
+        print(f"no validators found for operator {operator_id} on {network}")
 
 if __name__ == "__main__":
     main()
