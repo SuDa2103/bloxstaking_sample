@@ -32,11 +32,14 @@ Clone this repo onto your local machine so you have access to all the files and 
 ```
 git clone https://github.com/SuDa2103/bloxstaking_sample.git
 ```
-This should create you a folder named blocstaking_sample that you will use for the rest of this README.
+This should create you a folder named `blokstaking_sample` that you will use for the rest of this README.
 
-Make sure you adjust the script to your needs. Input your own API Key and on the **operator_id** variable, make sure to enter the ID of the operator you want to analyse. 
+Make sure you substitute `<YOUR_KEY>` in the `validators.py` script with your rated.network API key.
 
-At this point, you should be ready to run the script using the following command. 
+At this point, you should be ready to run the script using the following command.
+
 ```
-  python3 validators.py
+  python3 validators.py <network> <operator_id>
 ```
+
+Make sure to substitute `network` with one of these values: `holesky` or `mainnet`, and `operator_id` argument must be an integer.
